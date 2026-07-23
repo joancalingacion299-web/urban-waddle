@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareFlow | Queue Display</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body data-page="display">
+    <div class="display-screen">
+      <div class="display-panel">
+        <div class="display-header">
+          <img src="assets/icons/hospital-logo.svg" alt="CareFlow logo" />
+          <div>
+            <p class="eyebrow">CareFlow Hospital</p>
+            <h1>Now Serving</h1>
+          </div>
+        </div>
+
+        <div class="display-main">
+          <div class="display-queue">
+            <p class="eyebrow">Current Queue</p>
+            <h2 id="display-queue-number">—</h2>
+            <p id="display-department">Waiting for the next patient</p>
+          </div>
+          <div class="display-details">
+            <div class="detail-card">
+              <p>Current Date & Time</p>
+              <h3 id="display-time">--</h3>
+            </div>
+            <div class="detail-card">
+              <p>Next in Line</p>
+              <h3 id="display-next">—</h3>
+            </div>
+            <div class="detail-card announcement-card">
+              <p>Hospital Announcement</p>
+              <h3>Please proceed to the next available service desk.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/queue.js"></script>
+  </body>
+</html>

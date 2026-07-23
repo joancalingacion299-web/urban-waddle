@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareFlow | Patient Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/patient.css" />
+  </head>
+  <body data-page="register">
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <img src="assets/icons/hospital-logo.svg" alt="CareFlow logo" />
+          <div><h2>CareFlow</h2><p>Hospital Operations</p></div>
+        </div>
+        <nav class="nav-links">
+          <a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+          <a class="active" href="patient.html"><i class="fa-solid fa-user-plus"></i> Register Patient</a>
+          <a href="queue.html"><i class="fa-solid fa-users"></i> Queue Management</a>
+          <a href="display.html"><i class="fa-solid fa-display"></i> Queue Display</a>
+          <a href="reports.html"><i class="fa-solid fa-chart-line"></i> Reports</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+          <div>
+            <h3>Patient Registration</h3>
+            <p>Capture patient details with clarity and precision.</p>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+          </div>
+        </header>
+
+        <section class="patient-layout">
+          <div class="patient-hero">
+            <p class="eyebrow">New arrival</p>
+            <h1>Professional intake experience</h1>
+            <p>Register each patient in a calm and structured flow, while assigning them to the correct department and queue lane.</p>
+            <ul>
+              <li><i class="fa-solid fa-circle-check"></i> Auto-generated patient ID</li>
+              <li><i class="fa-solid fa-circle-check"></i> Immediate queue assignment</li>
+              <li><i class="fa-solid fa-circle-check"></i> Secure and responsive format</li>
+            </ul>
+          </div>
+
+          <div class="patient-card">
+            <div class="panel-heading"><h3>Patient details</h3><span class="pill" id="patient-id-display">Auto-generated</span></div>
+            <form id="patient-form" novalidate>
+              <div class="field-row">
+                <div class="fieldbox">
+                  <input id="patient-id" name="patient-id" type="text" placeholder=" " readonly />
+                  <label for="patient-id">Patient ID</label>
+                </div>
+                <div class="fieldbox">
+                  <input id="full-name" name="full-name" type="text" placeholder=" " required />
+                  <label for="full-name">Full Name</label>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="fieldbox">
+                  <input id="age" name="age" type="number" min="1" max="120" placeholder=" " required />
+                  <label for="age">Age</label>
+                </div>
+                <div class="fieldbox">
+                  <select id="gender" name="gender" required>
+                    <option value=""></option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                  <label for="gender">Gender</label>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="fieldbox">
+                  <input id="contact-number" name="contact-number" type="tel" placeholder=" " required />
+                  <label for="contact-number">Contact Number</label>
+                </div>
+                <div class="fieldbox">
+                  <select id="department" name="department" required>
+                    <option value=""></option>
+                    <option>General Medicine</option>
+                    <option>Pediatrics</option>
+                    <option>Dental</option>
+                    <option>Laboratory</option>
+                    <option>Pharmacy</option>
+                    <option>Emergency Room</option>
+                  </select>
+                  <label for="department">Department</label>
+                </div>
+              </div>
+              <div class="fieldbox">
+                <textarea id="address" name="address" placeholder=" " required></textarea>
+                <label for="address">Address</label>
+              </div>
+              <div class="validation-note" id="form-message"></div>
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Registration</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/patient.js"></script>
+  </body>
+</html>
